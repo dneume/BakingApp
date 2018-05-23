@@ -15,7 +15,7 @@ import static com.example.android.bakingapp.RecipeWidgetProvider.mRecipeName;
  * Created by dneum on 4/4/2018.
  */
 
-public class RecipeRefreshReceiver extends BroadcastReceiver{
+public class RecipeWidgetRefreshReceiver extends BroadcastReceiver{
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -34,7 +34,7 @@ public class RecipeRefreshReceiver extends BroadcastReceiver{
         RecipeWidgetProvider.getRecipeNameAndIngredientsList();
 
         // create the intent to get the next recipe in the list, after clicking the 'Next' button
-        Intent intentForButton = new Intent(context, RecipeRefreshReceiver.class);
+        Intent intentForButton = new Intent(context, RecipeWidgetRefreshReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intentForButton, 0);
 
         // Construct the RemoteViews object

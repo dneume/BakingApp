@@ -14,7 +14,7 @@
         android:layout_marginLeft="@dimen/widget_margin"
         android:dividerHeight="1dp"
         android:textSize="12sp"
-        android:text="IngredientsTextView"
+        android:text="@string/IngredientsTextView"
         android:textColor="@android:color/black"
         android:visibility="visible" />
 

@@ -9,7 +9,7 @@ import android.content.res.Resources;
 import android.widget.RemoteViews;
 import java.util.Iterator;
 
-import static com.example.android.bakingapp.ItemListActivity.recipeResults;
+import static com.example.android.bakingapp.RecipeListActivity.recipeResults;
 
 
 
@@ -42,7 +42,7 @@ public class RecipeWidgetProvider extends AppWidgetProvider {
         getRecipeNameAndIngredientsList();
 
         // create the intent to get the next recipe in the list, after clicking the 'Next' button
-        Intent intentForButton = new Intent(context, RecipeRefreshReceiver.class);
+        Intent intentForButton = new Intent(context, RecipeWidgetRefreshReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intentForButton, 0);
 
         // Set up the intent that starts the RecipeWidgetService, which will

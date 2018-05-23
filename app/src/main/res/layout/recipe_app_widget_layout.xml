@@ -14,7 +14,7 @@
         android:layout_toEndOf="@+id/appwidget_id"
         android:elevation="11dp"
         android:gravity="center"
-        android:text="Next"
+        android:text="@string/Next"
         android:textAlignment="gravity"
         android:textAppearance="@android:style/TextAppearance.Material.Button"
         android:textColor="@android:color/black"

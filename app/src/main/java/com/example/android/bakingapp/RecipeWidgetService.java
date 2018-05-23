@@ -65,7 +65,7 @@ class RecipeRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory 
     @Override
     public RemoteViews getViewAt(int position) {
         System.out.println("getViewAt-getCount="+Integer.toString(mRecipeAdapterSize));
-        RemoteViews view = new RemoteViews(mContext.getPackageName(), R.layout.item_list_of_ingredients);
+        RemoteViews view = new RemoteViews(mContext.getPackageName(), R.layout.recipe_app_widget_list_of_ingredients_layout);
         if(position < mRecipeAdapterSize ) {
             view.setTextViewText(R.id.ingredients_textView, recipeAdapter.get(position));
             System.out.println("getViewAt=" + Integer.toString(position) + " " + recipeAdapter.get(position));
